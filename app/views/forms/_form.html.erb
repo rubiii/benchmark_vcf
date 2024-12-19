@@ -1,0 +1,18 @@
+<%# locals: (model:, builder: nil) -%>
+
+<%= form_with(model:, url: "/", builder:) do |f| %>
+  <%= hidden_field_tag :expand, "true" %>
+  <%= hidden_field_tag :filter, "false" %>
+
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :options %>
+    <% 5.times do |n| %>
+      <%= f.check_box(:option_ids, {}, n, "") %>
+    <% end %>
+  </div>
+<% end %>

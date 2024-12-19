@@ -80,6 +80,9 @@ GEM
       tzinfo (~> 2.0)
     base64 (0.2.0)
     benchmark (0.4.0)
+    benchmark-ips (2.14.0)
+    benchmark-memory (0.2.0)
+      memory_profiler (~> 1)
     bigdecimal (3.1.8)
     builder (3.3.0)
     concurrent-ruby (1.3.4)
@@ -109,6 +112,8 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.4)
+    memory_profiler (1.1.0)
+    method_source (1.1.0)
     mini_mime (1.1.5)
     minitest (5.25.4)
     mutex_m (0.3.0)
@@ -204,6 +209,15 @@ GEM
     timeout (0.4.3)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    view_component (3.20.0)
+      activesupport (>= 5.2.0, < 8.1)
+      concurrent-ruby (~> 1.0)
+      method_source (~> 1.0)
+    view_component-form (0.2.9)
+      actionview (>= 6.1.0, < 8.1)
+      activesupport (>= 6.1.0, < 8.1)
+      view_component (>= 2.34.0, < 4.0)
+      zeitwerk (~> 2.5)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -226,12 +240,15 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  benchmark-ips
+  benchmark-memory
   debug
   puma (>= 5.0)
   rails (~> 7.1.5, >= 7.1.5.1)
   sprockets-rails
   sqlite3 (>= 1.4)
   tzinfo-data
+  view_component-form
 
 RUBY VERSION
    ruby 3.3.4p94
